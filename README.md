@@ -43,3 +43,16 @@ Exemple :
 #### -	Réseaux sociaux
 #### -	Cartes routières
 #### -	Réseaux électriques
+# Structures de Données
+## Les tableaux (cfr package tableau dans le projet)
+Les tableaux sont les structures de données les plus simples et on les utilise donc pour stocker une liste d’éléments comme des chaines de caractères, des nombres et/ou n’importe quel autre objet. Ces éléments sont stockés séquentiellement en mémoire, cela implique un index à chaque emplacement d’un élément.
+### Caractéristiques d'un tableau
+#### a. Ajout d'un élément
+Comme dans Java, ainsi que dans d’autres langages de programmation, les tableaux sont statiques, c’est – à – dire que quand nous les initialisons, nous devons spécifier leur taille et cette taille ne peut pas changer après. C’est pourquoi nous devons savoir à l’avance combien d’éléments nous allons stocker dans notre tableau.
+Si nous allouons un tableau trop grand que le nombre de nos éléments, nous allons gaspiller de la mémoire car nous aurons des cases qui ne seront jamais remplies, et si nous allouons un tableau petit face au nombre d’élément, notre tableau se remplira rapidement.
+Alors pour ajouter un autre élément, nous devons redimensionner notre tableau, c’est – à – dire, nous allons allouer un tableau plus grand et copier tous les éléments de l’ancien tableau vers le nouveau.
+#### b. Suppression d'un élément
+Si nous voulons supprimer un élément dans un tableau, il existe plusieurs scénarios :
+-	Si l’élément à supprimer est à la fin du tableau, il suffit juste de lire son index et de le supprimer, ce qui est le meilleur des cas.
+-	Si l’élément est au début du tableau, nous devons décaler tous les autres éléments pour combler la case vide, plus nous avons des éléments plus cette opération est couteuse.
+Pour corriger ces anomalies, nous avons travailler sur une dynamisme forcée du tableau tout en implémentant les méthodes importantes pour l'ajout, la suppression, la lecture et la modification;
