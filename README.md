@@ -56,3 +56,15 @@ Si nous voulons supprimer un élément dans un tableau, il existe plusieurs scé
 -	Si l’élément à supprimer est à la fin du tableau, il suffit juste de lire son index et de le supprimer, ce qui est le meilleur des cas.
 -	Si l’élément est au début du tableau, nous devons décaler tous les autres éléments pour combler la case vide, plus nous avons des éléments plus cette opération est couteuse.
 Pour corriger ces anomalies, nous avons travailler sur une dynamisme forcée du tableau tout en implémentant les méthodes importantes pour l'ajout, la suppression, la lecture et la modification;
+## Listes chaînées (Linked List)
+### Notions
+Dans les algorithmes on recourt aux listes chainées pour stocker des éléments séquentiellement, mais contrairement aux tableaux les listes chainées peuvent grandir et rétrécir automatiquement.
+Une liste chainée consiste en un groupe de nœuds ordonnées séquentiellement, chaque nœud contient deux informations : la première c’est la valeur et la seconde c’est l’adresse du prochain nœud de la liste. On dit que chaque nœud pointe ou référence le prochain nœud, c’est pour cela qu’on appelle cette structure de données liste chainées car les nœuds sont chainés.
+Le premier nœud est appelé head ou tête et le dernier nœud est appelé tail ou queue.
+### Listes chaînées en Java
+Il y a plusieurs façons de représenter les listes chaînées en Java. L’idée de base est d’utiliser un enchaînement de cellules :
+#### –	Chaque cellule contient un élément de la liste ;
+#### –	Chaque cellule contient une référence vers la cellule suivante, sauf la dernière cellule de la liste (qui contient une référence nulle) ;
+#### –	La liste donne accès à la première cellule, le reste de la liste est accessible en passant de cellule en cellule, suivant leur enchaînement.
+Java implémente cela avec la classe java.util.LinkedList, une liste doublement chaînée, offrant des insertions/suppressions rapides, mais un accès aléatoire plus lent qu'un ArrayList, car il faut parcourir les nœuds séquentiellement. On peut créer une liste avec : 
+LinkedList<Type> maListe = new LinkedList<>();
